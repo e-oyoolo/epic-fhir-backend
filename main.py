@@ -95,11 +95,18 @@ class EpicObject:
         # patient_id = '77474747'
         mrn_n = '77474747'
         url = BASE_URL + 'api/FHIR/R4/Account?subject=Patient/' + patient_id
-        # url = BASE_URL + 'api/FHIR/R4/Patient?name=TruamSuite%20Doe&birthdate=1990-08-26'# + patient_id
+        url = BASE_URL + 'api/FHIR/R4/Patient?name=TruamSuite%20Doe&birthdate=1990-08-26'# + patient_id
+        url = BASE_URL + 'api/FHIR/R4/Patient?name=Cook%20Doe&birthdate=1999-12-22'# + patient_id
         # url = BASE_URL + 'api/FHIR/R4/Patient/' + patient_id
-        # url = BASE_URL + 'api/FHIR/R4/Patient/' + patient_id + "/$everything"
-        # url = BASE_URL + f"api/FHIR/R4/Observation?patient={patient_id}&category=social-history"
-        url = BASE_URL + f"api/FHIR/R4/Encounter?patient={patient_id}&date=2024-05-05" # GET ENCOUNTERS
+        url = BASE_URL + 'api/FHIR/R4/Patient/' + patient_id + "/$everything"
+        
+        url = BASE_URL + f"api/FHIR/R4/Observation?patient={patient_id}&category=vital-signs"
+        url = BASE_URL + f"api/FHIR/R4/Observation?patient={patient_id}&category=social-history"
+        url = BASE_URL + f"api/FHIR/R4/Coverage?patient={patient_id}"
+        url = BASE_URL + f"api/FHIR/R4/Procedure?patient={patient_id}"
+        url = BASE_URL + f"api/FHIR/R4/Account?patient={patient_id}"
+        # url = BASE_URL + f"api/FHIR/R4/Encounter?patient={patient_id}"
+        # url = BASE_URL + f"api/FHIR/R4/Encounter?date=2025-08-25&patient={patient_id}" # GET ENCOUNTERS
         # url = BASE_URL + f"api/FHIR/R4/Patient/eHk3h3keLZ1WZEDPQm8vpfA3/Observation?_count=50"
         print(url)
         response = requests.get(url, headers=headers)
