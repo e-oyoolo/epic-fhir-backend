@@ -93,27 +93,38 @@ class EpicObject:
                 
         patient_id = 'etDKPcwIdT7TWGl09XdOjGg3'
         patient_id = 'eeWQ7mvzYE4vdGiILEab4pg3'#Cookson
-        patient_id = 'eHk3h3keLZ1WZEDPQm8vpfA3'
-        patient_id = 'etDKPcwIdT7TWGl09XdOjGg3'
+        patient_id = 'eiLtB3rWviwFjei5r8ikZdg3'
+        patient_id = 'eiLtB3rWviwFjei5r8ikZdg3'
         # patient_id = '77474747'
         mrn_n = '77474747'
         url = BASE_URL + 'api/FHIR/R4/Account?subject=Patient/' + patient_id
-        # url = BASE_URL + 'api/FHIR/R4/Patient?name=TruamSuite%20Doe&birthdate=1990-08-26'# + patient_id
-        url = BASE_URL + 'api/FHIR/R4/Patient?name=Cook%20Doe&birthdate=1999-12-22'# + patient_id
+        url = BASE_URL + 'api/FHIR/R4/Patient?name=TruamSuite%20Doe&birthdate=1999-12-22'# + patient_id
+        url = BASE_URL + 'api/FHIR/R4/Patient?name=Perryville'#&birthdate=1989-12-22'# + patient_id
+        url = BASE_URL + 'api/FHIR/R4/Patient?identifier=urn:oid:1.2.840.114350.1.13.564.3.7.5.737384.14|2000053771'
+
         # url = BASE_URL + 'api/FHIR/R4/Patient?name=Cookson%20Doe&birthdate=1979-12-22'# + patient_id
-        # url = BASE_URL + 'api/FHIR/R4/Patient/' + patient_id
-        # url = BASE_URL + 'api/FHIR/R4/Patient/' + patient_id + "/$everything"
-        
+        # url = BASE_URL + 'api/FHIR/R4/Patient?name=Quantico%20Davids&birthdate=1979-12-22'# + patient_id
+        # patient_id = 'eeWQ7mvzYE4vdGiILEab4pg3'
+        url = BASE_URL + 'api/FHIR/R4/Encounter/eUwaBtIt.IIIAZr5xR.Tj9h4xwEkST-TAxXIlokrLqCg3'# + patient_id
+        # url = BASE_URL + 'api/FHIR/R4/metadata'
+        # url = BASE_URL + 'api/FHIR/R4/Patient?date=ge2025-01-01'
+        # url = BASE_URL + 'api/FHIR/R4/Encounter?date=ge2025-07-08&date=lt2025-10-09&_include=Encounter:patient&_count=200'
+        # url = BASE_URL + 'api/FHIR/R4/Encounter?date=ge2025-07-08&_include=Encounter:patient&_count=200'
         # url = BASE_URL + f"api/FHIR/R4/Observation?patient={patient_id}&category=vital-signs"
         # url = BASE_URL + f"api/FHIR/R4/Observation?patient={patient_id}&category=social-history"
         # url = BASE_URL + f"api/FHIR/R4/Coverage?patient={patient_id}"
         # url = BASE_URL + f"api/FHIR/R4/Procedure?patient={patient_id}"
         # url = BASE_URL + f"api/FHIR/R4/Account?patient={patient_id}"
+        # url = BASE_URL + f"api/FHIR/R4/Account?patient={patient_id}"
+        # url = BASE_URL + f"api/FHIR/R4//Patient?_id={patient_id}&_revinclude=Account:patient"
         # url = BASE_URL + f"api/FHIR/R4/Encounter?patient={patient_id}"
         # url = BASE_URL + f"api/FHIR/R4/Encounter?date=2025-08-25&patient={patient_id}" # GET ENCOUNTERS
         # url = BASE_URL + f"api/FHIR/R4/Patient/eHk3h3keLZ1WZEDPQm8vpfA3/Observation?_count=50"
         # url = BASE_URL + f"api/FHIR/R4/Location/eyIW.idETAvAl8masmZP9cI-Zs9SBA34NVKRuVLjQ4Sc3"
-        
+        # url = BASE_URL + f"api/FHIR/R4/Location/eF9Un1ZR6HDVZoEiyWRa-FTM-Bu-fZj9zkNLWQVwTIuM3"
+        # url = BASE_URL + f"api/FHIR/R4/Patient?identifier=urn:oid:1.2.840.114350.1.13.564.3.7.5.737384.14|2000053766"
+        # url = BASE_URL + f"api/FHIR/R4/Condition?patient={patient_id}"
+
         print(url)
         response = requests.get(url, headers=headers)
         # response = requests.get("https://epicproxy-np.et1131.epichosted.com/FHIRProxy/api/FHIR/R4/Patient/" + patient_id, headers=headers)
